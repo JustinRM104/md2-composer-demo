@@ -1,5 +1,13 @@
 <?php
 // Laad de composer autoloader in
+require 'vendor/autoload.php';
+
+use Zxing\QrReader;
+
+$qrcode = new QrReader('qrcode.png');
+$text = $qrcode->text();
+
+echo $text;
 
 // Lees de documentatie van de khanamiryan/qrcode-detector-decoder package:
 // Zo weet je hoe je deze package kunt gebruiken
